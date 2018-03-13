@@ -1,3 +1,5 @@
 const weather = require('./weather.js');
 
-weather.get('New_York', 'CA');
+const query = process.argv.slice(2).join("_").replace(' ', '_');
+
+weather.get(query);
